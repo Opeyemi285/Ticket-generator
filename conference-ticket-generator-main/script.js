@@ -1,0 +1,79 @@
+// variables
+const button = document.getElementById('button');
+const email = document.getElementById('email');
+const error = document.getElementById('error');
+const imageError = document.getElementById('imageError');
+const fileInput = document.getElementById('fileInput');
+const fullName = document.getElementById('fullName');
+const register = document.getElementById('register');
+const username = document.getElementById('username')
+// Get the avatar preview element
+const avatarPreview = document.getElementById('avatarPreview');
+// ticket variables
+const ticket = document.getElementById('ticket');
+const ticketName = document.getElementById('ticketName');
+const ticketName1 = document.getElementById('ticketName1');
+const ticketEmail = document.getElementById('ticketEmail');
+const ticketUsername = document.getElementById('ticketUsername')
+
+// Update the ticket section with the uploaded image
+button.addEventListener('click', (event) => {
+    event.preventDefault(); // Prevent the form from submitting
+
+    const emailValue = email.value.trim();
+    const fullNameValue = fullName.value.trim();
+    const usernameValue = username.value.trim();
+    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+    if (!emailRegex.test(emailValue)) {
+        error.style.display = 'block';
+        email.setAttribute('aria-invalid', 'true');
+        email.focus();
+    } else {
+        error.style.display = 'none';
+        email.setAttribute('aria-invalid', 'false');
+
+        // Store fullName and email for ticket
+        ticketName.innerText = fullNameValue;
+        ticketName1.innerText = fullNameValue;
+        ticketEmail.innerText = emailValue;
+        ticketUsername.innerHTML = usernameValue;
+
+        // Set the uploaded image in the ticket section
+        ticket.querySelector('img[alt=""]').src = avatarPreview.src; // Update the ticket image
+
+        // Hide the register div and show the ticket div
+        register.style.display = 'none';
+        ticket.style.display = 'block'; // Change to 'block' or your desired display style
+    }
+});
+// Clear the error message immediately as user types/corrects
+email.addEventListener('input', () => {
+  if (error.style.display === 'block') {
+    error.style.display = 'none';
+    email.setAttribute('aria-invalid', 'false');
+  }
+});
+
+// Check image size and display the uploaded image
+fileInput.addEventListener('change', () => {
+    const file = fileInput.files[0];
+    if (file) {
+        const fileSizeInKB = file.size / 1024; // Convert bytes to kilobytes
+        if (fileSizeInKB > 500) {
+            imageError.innerText = 'File too large. Please upload a photo under 500 kilobytes';
+            imageError.style.display = 'inline';
+            imageError.style.color = 'red';
+        } else {
+            imageError.innerText = 'Acceptable file size';
+            imageError.style.color = "white";
+            // Create a URL for the uploaded image and set it as the src for the avatar preview
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                avatarPreview.src = e.target.result; // Set the avatar preview to the uploaded image
+                avatarPreview.style.display = 'block'; // Show the avatar preview
+            };
+            reader.readAsDataURL(file);
+        }
+    }
+});

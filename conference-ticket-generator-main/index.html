@@ -31,7 +31,7 @@
               <div class="avatar-upload">
                 <label class="custom-button" for="fileInput"><img src="assets/images/icon-upload.svg" alt="Upload image" id="avatarPreview" style="margin: auto;"></label>
                 <!-- <img  src="assets/images/image-avatar.jpg" alt="Avatar Preview" style=" display: none; border-radius: 6px; width: 50px; height: 50px;"> -->
-                <input type="file" name="avatar" id="fileInput" accept=".jpg, .png">
+                <input type="file" name="avatar" id="fileInput" accept=".jpg, .png" required>
                 <p>Drag and drop or click to upload</p>
                 
               </div>
@@ -42,12 +42,12 @@
               <br>
               <label for="fullName">Full Name <br><input type="text" name="fullName" id="fullName"></label>
               <br>
-              <label for="email">Email Address </label><br> <input type="email" placeholder="example@email.com" name="email" id="email">
+              <label for="email">Email Address </label><br> <input type="email" placeholder="example@email.com" name="email" id="email" required>
               <div class="error" id="error">
                 <img src="assets/images/icon-info.svg" alt="Info icon" style="position: relative; top: 5px;">
                 <small style="font-size: xx-small; margin-left: -6px;">Please enter a valid email address</small> 
               </div>
-              <label for="username">GitHub Username </label><br><input type="text" placeholder="@yourusername" id="username">
+              <label for="username">GitHub Username </label><br><input type="text" placeholder="@yourusername" id="username" required>
               <br>
               <button style="position: relative; z-index: 1;" id="button">Generate My Ticket </button>
             </div>

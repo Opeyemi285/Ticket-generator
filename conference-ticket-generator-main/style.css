@@ -10,10 +10,7 @@ body {
 form.form {
     width: 35%;
     margin: auto;
-    /* background-color: black; */
     margin-bottom: 20px;
-    /* line-height: 30px; */
-    /* text-align: center; */
     position: relative;
     z-index: 1;
 }
@@ -46,9 +43,6 @@ button {
 button:hover {
     cursor: pointer;
 }
- /* input {
-    cursor: pointer;
- } */
 input[type="text"], input[type="email"] {
     height: 30px;
     width: 100%;
@@ -112,54 +106,57 @@ img.squiggly-line-bottom {
     width: 60%;
 }
 
-/* Ticket styles */
-p.user-info {
-    position: relative;
-    top: -4.3rem;
-    left: 60px;
-    bottom: 70px;
-}
-section.ticket {
-    margin: auto; 
-    width: 50%; 
-    text-align: center;
+div.ticket {
+    width: 50%;
+    margin: auto;
+    
 }
 div.ticket-info {
     background-image: url('assets/images/pattern-ticket.svg');
-    background-repeat: no-repeat;
-    background-position: center;
-    margin-top: 2%;
-    width: 100%;
+    background-size: 100% 100%;
+    padding: 3.5vw;
+    font-size: 2vw;
 }
-
-p.coding {
-    font-size: 2.5rem; 
-    font-weight: 900;
-}
-div.coding-info {
-    position: relative; 
-    top: 50px; 
-    text-align: left; 
-    margin-left: 4rem;
+img.ticket-img {
+    width: 70%;
+    margin: auto;
 }
 img.coding-img {
-    height: 1.5rem; 
-    margin-right: 5px;
-}
-span.time-location {
-    font-size: 12px; 
-    position: relative;
-    top: -2.5rem;
-    font-weight: 200;
-}
-div.user-info {
-    text-align: left; 
-    margin-left: 4rem; 
-    margin-top: 7rem;
+    height: 1.5vw;
 }
 img.user-info-img {
-     height: 9.5%;
-     width: 9.5%;
+    width: 5vw;
+    height: 5vw;
+    border-radius: 8px;
+    position: relative;
+    top: 3vw;
+}
+div.user-info {
+    display: flex;
+    margin-top: 3vw;
+}
+div.user-info-para {
+    margin-top: 1.5vw;
+    margin-left: 1vw;
+    line-height: 1vw;
+}
+img.github-img  {
+    width: 1.2vw;
+}
+p.coding {
+    margin: 5px;
+}
+div.coding-info {
+    font-size: 3vw;
+}
+span.github, span.time-location {
+    font-size: 1.4vw;
+}
+span#ticketEmail {
+    color: hsl(7, 86%, 67%);
+}
+p.ticketEmail {
+    text-align: center;
 }
 @media (max-width: 768px) {
     form.form {
@@ -171,98 +168,43 @@ img.user-info-img {
     div.all {
         width: 100%;
     }
-    img.user-info-img {
-        height: 50px;
-        width: 50px;
-    }
-    
-    div.ticket-info {
-        font-size: 16px;
-}
-    p.coding {
-        font-size: 2rem; 
-        font-weight: 900;
-        margin-bottom: 40px;
-}
-    img.coding-img {
-        height: 1.5rem;
-        margin-right: 5px;
-        
-}
-    span.time-location {
-        font-size: 0.7rem; 
-        position: relative;
-        font-weight: 200;
-        
-}
-    div.user-info {
-       
-        margin-top: 4rem;
-    }
-    section.ticket {
-    margin: auto; 
-    width: 100%; 
-    text-align: center;
-    
-}
     img.squiggly-line-top {
         width: 60%;
     }
     img.squiggly-line-bottom {
         width: 60%;
     }
-
-}
-@media (max-width: 375px) {
-    body {
-        margin-top: 20%;
-    }
-    div.coding-info {
-        margin-top: -10rem;
-        margin-left: 2rem;
-    }
-    p.coding {
-        font-size: 1.2rem; 
-        font-weight: 900;
-        margin-bottom: 40px;
-}
-    img.coding-img {
-        height: 0.6rem;
-        margin-right: 5px;
-        
-}
-    span.time-location {
-        font-size: 0.6rem; 
-        font-weight: 200;
-        
-}
-div.user-info {
-        margin-top: 2rem;
-        font-size: 9px;
-        position: relative;
-        margin-left: 2rem;
-    }
-img.user-info-img {
-        height: 40px;
-        width: 40px;
-    }
-    p.user-info {
-        position: relative;
-        top: -4rem;
-        left: 50px;
-        bottom: 0px;
-}
-    div.user-info-para {
-        margin-top: 20px;
-    }
-    div.user-info-para:last-child {
-        font-size: 12px;
-    }
-    img.github-img {
-        margin-top: 10px;
-        width: 16px;
+    div.ticket {
+        width: 100%;
+        margin-top: 15vw;
     }
     div.ticket-info {
+        background-image: url('assets/images/pattern-ticket.svg');
         background-size: 100% 100%;
+        padding: 10vw;
+        font-size: 5vw;
+}
+    img.github-img  {
+        width: 2.5vw;
     }
+    div.coding-info {
+    font-size: 5vw;
+    margin-bottom: 5vw;
+    padding-top: 10px;
+}
+    img.user-info-img {
+        width: 10vw;
+        height: 10vw;
+        top: 4vw;
+    }
+    span.github, span.time-location {
+    font-size: 2.5vw;
+}
+    img.coding-img {
+        height: 3.5vw;
+    }
+    div.user-info {
+    display: flex;
+    margin-top: 0;
+}
 }

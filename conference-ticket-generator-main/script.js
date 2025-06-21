@@ -6,7 +6,7 @@ const imageError = document.getElementById('imageError');
 const fileInput = document.getElementById('fileInput');
 const fullName = document.getElementById('fullName');
 const register = document.getElementById('register');
-const username = document.getElementById('username')
+const username = document.getElementById('username');
 // Get the avatar preview element
 const avatarPreview = document.getElementById('avatarPreview');
 // ticket variables
@@ -14,7 +14,28 @@ const ticket = document.getElementById('ticket');
 const ticketName = document.getElementById('ticketName');
 const ticketName1 = document.getElementById('ticketName1');
 const ticketEmail = document.getElementById('ticketEmail');
-const ticketUsername = document.getElementById('ticketUsername')
+const ticketUsername = document.getElementById('ticketUsername');
+
+// Function to check if all inputs are filled
+function checkInputs() {
+    return email.value.trim() !== '' && 
+           fullName.value.trim() !== '' && 
+           username.value.trim() !== '' && 
+           avatarPreview.src !== ''; // Ensure an image is uploaded
+}
+
+// Disable the button initially
+button.disabled = true;
+
+// Add event listeners to inputs to enable/disable the button
+email.addEventListener('input', toggleButton);
+fullName.addEventListener('input', toggleButton);
+username.addEventListener('input', toggleButton);
+fileInput.addEventListener('change', toggleButton);
+
+function toggleButton() {
+    button.disabled = !checkInputs();
+}
 
 // Update the ticket section with the uploaded image
 button.addEventListener('click', (event) => {
@@ -47,12 +68,13 @@ button.addEventListener('click', (event) => {
         ticket.style.display = 'block'; // Change to 'block' or your desired display style
     }
 });
+
 // Clear the error message immediately as user types/corrects
 email.addEventListener('input', () => {
-  if (error.style.display === 'block') {
-    error.style.display = 'none';
-    email.setAttribute('aria-invalid', 'false');
-  }
+    if (error.style.display === 'block') {
+        error.style.display = 'none';
+        email.setAttribute('aria-invalid', 'false');
+    }
 });
 
 // Check image size and display the uploaded image

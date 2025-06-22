@@ -158,6 +158,9 @@ span#ticketEmail {
 p.ticketEmail {
     text-align: center;
 }
+span.at-span {
+    font-size: 1.5vw;
+}
 @media (max-width: 768px) {
     form.form {
         width: 100%;

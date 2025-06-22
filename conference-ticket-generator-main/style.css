@@ -161,6 +161,14 @@ p.ticketEmail {
 span.at-span {
     font-size: 1.4vw;
 }
+p.id {
+    position: relative;
+    left: 39.5vw;
+    top: 0.5vw;
+    margin: 0;
+    writing-mode: vertical-lr;
+    color: hsl(245, 15%, 58%);
+}
 @media (max-width: 768px) {
     form.form {
         width: 100%;

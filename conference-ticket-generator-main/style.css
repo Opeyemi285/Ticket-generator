@@ -133,7 +133,7 @@ img.user-info-img {
 }
 div.user-info {
     display: flex;
-    margin-top: 3vw;
+    margin-top: -1.5vw;
 }
 div.user-info-para {
     margin-top: 1.5vw;

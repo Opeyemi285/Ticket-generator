@@ -211,4 +211,8 @@ p.ticketEmail {
         text-wrap: nowrap;
         font-size: 3vw;
     }
+    p#ticketUsername {
+        text-wrap: nowrap;
+        font-size: 1.5px;
+    }
 }

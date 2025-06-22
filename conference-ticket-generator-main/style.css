@@ -233,4 +233,7 @@ p.id {
         top: -5vw;
         left: 74vw;
     }
+    img.squiggly-line-bottom {
+        content: url('assets/images/pattern-squiggly-line-bottom-mobile-tablet.svg');
+    }
 }

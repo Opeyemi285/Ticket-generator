@@ -183,7 +183,7 @@ p.ticketEmail {
         background-size: 100% 100%;
         padding: 10vw;
         font-size: 5vw;
-}
+    }
     img.github-img  {
         width: 2.5vw;
     }
@@ -191,7 +191,7 @@ p.ticketEmail {
     font-size: 5vw;
     margin-bottom: 5vw;
     padding-top: 10px;
-}
+    }
     img.user-info-img {
         width: 10vw;
         height: 10vw;
@@ -199,12 +199,16 @@ p.ticketEmail {
     }
     span.github, span.time-location {
     font-size: 2.5vw;
-}
+    }
     img.coding-img {
         height: 3.5vw;
     }
     div.user-info {
     display: flex;
     margin-top: 0;
-}
+    }
+    p.name {
+        text-wrap: nowrap;
+        font-size: 3vw;
+    }
 }

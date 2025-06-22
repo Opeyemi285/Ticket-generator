@@ -216,4 +216,7 @@ p.ticketEmail {
         font-size: 2.5vw;
         margin-top: 20px;
     }
+    span.at-span {
+        font-size: 2.5vw;
+    }
 }

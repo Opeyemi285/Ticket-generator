@@ -7,6 +7,16 @@ body {
     color: whitesmoke;
     font-family: "Inconsolata";
 }
+div.pattern-line {
+    background-image: url('assets/images/pattern-lines.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
+div.pattern-circle {
+    background-image: url('assets/images/pattern-circle.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+}
 form.form {
     width: 35%;
     margin: auto;
@@ -228,7 +238,7 @@ p.id {
     }
     span.at-span {
     font-size: 3vw;
-}
+    }
     p.id {
         top: -5vw;
         left: 74vw;

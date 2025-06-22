@@ -213,6 +213,6 @@ p.ticketEmail {
     }
     p#ticketUsername {
         text-wrap: nowrap;
-        font-size: 1.5px;
+        font-size: 1.5vw;
     }
 }

@@ -14,7 +14,7 @@ div.pattern-line {
 }
 div.pattern-circle {
     background-image: url('assets/images/pattern-circle.svg');
-    background-position: center;
+    background-position: right;
     background-repeat: no-repeat;
 }
 form.form {

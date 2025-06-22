@@ -214,5 +214,6 @@ p.ticketEmail {
     p#ticketUsername {
         text-wrap: nowrap;
         font-size: 2.5vw;
+        margin-top: 20px;
     }
 }

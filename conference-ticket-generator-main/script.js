@@ -15,6 +15,12 @@ const ticketName = document.getElementById('ticketName');
 const ticketName1 = document.getElementById('ticketName1');
 const ticketEmail = document.getElementById('ticketEmail');
 const ticketUsername = document.getElementById('ticketUsername');
+const ticketId = document.getElementById('ticketId');
+
+// Function to generate a random number between 10000 and 99999
+function generateRandomNumber() {
+    return Math.floor(Math.random() * (99999 - 10000 + 1)) + 10000;
+}
 
 // Function to check if all inputs are filled
 function checkInputs() {
@@ -60,10 +66,12 @@ button.addEventListener('click', (event) => {
         ticketEmail.innerText = emailValue;
         ticketUsername.innerHTML = usernameValue;
 
+        // Generate a random ticket ID and set it
+        const randomTicketId = generateRandomNumber();
+        ticketId.innerText = `#${randomTicketId}` ; // Set the ticket ID
+
         // Set the uploaded image in the ticket section
         ticket.querySelector('img[alt=""]').src = avatarPreview.src; // Update the ticket image
-
-        // Hide the register div and show the ticket div
         register.style.display = 'none';
         ticket.style.display = 'block'; // Change to 'block' or your desired display style
     }
